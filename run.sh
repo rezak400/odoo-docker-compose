@@ -4,7 +4,7 @@ PORT=$2
 CHAT=$3
 
 # Clone Odoo directory
-git clone --depth=1 -b 18.0 https://github.com/rezak400/odoo-docker-compose $DESTINATION
+git clone --depth=1 -b 19.0 https://github.com/rezak400/odoo-docker-compose $DESTINATION
 rm -rf $DESTINATION/.git
 
 # Create PostgreSQL directory
@@ -31,12 +31,12 @@ fi
 # Update docker-compose configuration
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS sed syntax
-  sed -i '' 's/10018/'$PORT'/g' $DESTINATION/docker-compose.yml
-  sed -i '' 's/20018/'$CHAT'/g' $DESTINATION/docker-compose.yml
+  sed -i '' 's/10019/'$PORT'/g' $DESTINATION/docker-compose.yml
+  sed -i '' 's/20019/'$CHAT'/g' $DESTINATION/docker-compose.yml
 else
   # Linux sed syntax
-  sed -i 's/10018/'$PORT'/g' $DESTINATION/docker-compose.yml
-  sed -i 's/20018/'$CHAT'/g' $DESTINATION/docker-compose.yml
+  sed -i 's/10019/'$PORT'/g' $DESTINATION/docker-compose.yml
+  sed -i 's/20019/'$CHAT'/g' $DESTINATION/docker-compose.yml
 fi
 
 # Set file and directory permissions after installation
@@ -53,4 +53,4 @@ else
 fi
 
 
-echo "Odoo started at http://localhost:$PORT | Master Password: @rezaadmin123321 | Live chat port: $CHAT"
+echo "Odoo started at http://localhost:$PORT | Master Password: rezahandsome123 | Live chat port: $CHAT"

@@ -1,7 +1,7 @@
 
-# Odoo 18.0 Docker Compose
+# Odoo 19.0 Docker Compose
 
-**Deploy Odoo 18.0 in seconds — with support for multiple instances on the same server**
+**Deploy Odoo 19.0 in seconds — with support for multiple instances on the same server**
 
 ## 🚀 Quick Installation
 
@@ -11,16 +11,16 @@ sudo apt update && sudo apt install -y ca-certificates curl gnupg lsb-release &&
 ```
 
 
-then run this command to setup the first instance at `localhost:18001` (default master password: `rezahandsome123`):
+then run this command to setup the first instance at `localhost:19001` (default master password: `rezahandsome123`):
 
 ```bash
-curl -s https://raw.githubusercontent.com/rezak400/odoo-docker-compose/master/run.sh | bash -s odoo-one 18001 28001
+curl -s https://raw.githubusercontent.com/rezak400/odoo-docker-compose/19.0/run.sh | bash -s odoo-one 19001 29001
 ```
 
-To create additional instances (for example at port `11018`):
+To create additional instances (for example at port `11019`):
 
 ```bash
-curl -s https://raw.githubusercontent.com/rezak400/odoo-docker-compose/master/run.sh | bash -s odoo-two 18002 28002
+curl -s https://raw.githubusercontent.com/rezak400/odoo-docker-compose/19.0/run.sh | bash -s odoo-two 19002 29002
 ```
 
 **Parameters:**
@@ -50,7 +50,7 @@ sudo yum install curl
 docker-compose up
 ```
 
-Then open: [http://localhost:18001](http://localhost:18001)
+Then open: [http://localhost:19001](http://localhost:19001)
 
 ---
 
@@ -72,7 +72,7 @@ Edit the `docker-compose.yml` file and change this part:
 
 ```yaml
 ports:
- - "10018:8069"
+ - "10019:8069"
 ```
 
 ---
@@ -167,13 +167,13 @@ docker-compose down
 
 ## 💬 Live Chat Support
 
-Port `28001` is specifically provided for live chat features (long polling).
+Port `29001` is specifically provided for live chat features (long polling).
 
 If using Nginx in production, add this to the configuration:
 
 ```nginx
 location /longpolling/ {
-    proxy_pass http://0.0.0.0:28001/longpolling/;
+    proxy_pass http://0.0.0.0:29001/longpolling/;
 }
 ```
 
@@ -181,27 +181,31 @@ location /longpolling/ {
 
 ## 📦 docker-compose.yml Summary
 
-- **Odoo**: version 18
-- **PostgreSQL**: version 17
+- **Odoo**: version 19
+- **PostgreSQL**: version 18
 
 ---
 
 ## 📸 Screenshots
 
 <p align="center">
-<img src="screenshots/odoo-18-welcome-screenshot.png" width="50%">
+<img src="screenshots/odoo-19-welcome-screenshot.jpg" width="50%">
 </p>
 
 <p>
-<img src="screenshots/odoo-18-apps-screenshot.png" width="100%">
+<img src="screenshots/odoo-19-apps-screenshot.jpg" width="100%">
 </p>
 
 <p>
-<img src="screenshots/odoo-18-sales-screen.png" width="100%">
+<img src="screenshots/odoo-19-dashboard.jpg" width="100%">
 </p>
 
 <p>
-<img src="screenshots/odoo-18-product-form.png" width="100%">
+<img src="screenshots/odoo-19-sales-screen.jpg" width="100%">
+</p>
+
+<p>
+<img src="screenshots/odoo-19-product-form.jpg" width="100%">
 </p>
 
 ---
